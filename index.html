@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Code Review 7</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<script
+  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+  crossorigin="anonymous"></script>   
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+
+<body style="background-color: #3E3F89">
+	<div class="row" style="background-color: #4267B2; height: 50px;padding-top:10px;">
+		<div class="col-lg-12 col-xs-6" style="background-color: #4267B2;">
+		<img src="img/logo-coders-dating-footer.png" alt="logo-coders-dating-footer" class="img-responsive center-block" >
+		</div>
+		<br>
+	</div><!--end row-->
+	<div class="container"><!--nav bar begin-->
+		<ul class="nav nav-tabs nav-justified" style="background-color: #39A1E0">
+       		<li class="active"><a data-toggle="tab" href="#home" style="font-weight: bolder;color: #002D6E">Home</a></li>
+        	<li><a data-toggle="tab" href="#menu1" style="font-weight: bolder;color: #002D6E">Meet jung people and give some likes!</a></li>
+        	<li><a data-toggle="tab" href="#menu2" style="font-weight: bolder;color: #002D6E">Meet some Girls</a></li>
+        	<li><a data-toggle="tab" href="#menu3" style="font-weight: bolder;color: #002D6E">Meet some Boys</a></li>
+    	</ul>
+    	<div class="tab-content">
+        	<div id="home" class="tab-pane fade in active">
+          		<img src="img/pc.jpg" onmouseover="src='img/pc1.jpg'" onmouseout="src='img/pc.jpg'" class= "img-responsive img-circle">
+        	</div><!--end mouseover part-->
+
+	        <div id="menu1" class="tab-pane fade">
+                 <div class="container" id="bigList">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 colhead"></div>
+                    </div><!--end class row-->
+                </div><!--end class="container" id="bigList" -->
+                <script src="js/script.js"></script>
+                    
+                    <!-- CALL PAGE SPECIFIC VIEW FUNCTION -->
+                <div class="container" id="allPerson">
+                    <div class="row">
+                        <script>
+                         allList();
+                     </script>
+                    </div>
+                    
+                </div><!-- end class="container" id="allPerson-->           
+            </div><!--end class="tab-pane fade-->
+
+	        
+	        <div id="menu2" class="tab-pane fade">
+                <div class="container" id="women"></div>
+                    <script src="js/script.js"></script>
+                    <!-- CALL PAGE SPECIFIC VIEW FUNCTION -->
+                    <div class="container" id="Women">
+                      <script>
+                        onlyWomen();
+                      </script>
+                    </div>
+	           </div><!--end id="menu2" class="tab-pane fade-->
+
+
+
+	        <div id="menu3" class="tab-pane fade">
+                <div class="container" id="men"></div>    
+                    <script src="js/script.js"></script>
+                    <!-- CALL PAGE SPECIFIC VIEW FUNCTION -->
+                    <div id="man">
+                      <script>
+                        onlyMen();
+                      </script>
+                    </div>
+	        </div><!--end id="menu3" class="tab-pane fade"-->
+      
+
+    </div><!-- end first container-->
+    <div class="row" style="background-color: #4267B2; height: 50px;padding-top:10px;">
+		<div class="col-lg-12 col-xs-6" >
+		<img src="img/logo-coders-dating-footer.png" alt="logo-coders-dating-footer" class="img-responsive center-block" >
+		</div>
+	</div><!--end row-->
+
+
+		
+	
+
+
+</body>
+
+</html>
