@@ -13,23 +13,22 @@ class Person {
     this.inRelation = inRelation;
   }
 
- 
   render(i) {
     let msg ='';
      msg+= `
   
-      <div class="pers" class="col-lg-3 col-md-6 col-sm-12 col-xs-12" style="margin-top:30px;">
-        <div class="pic">
+      <div class="pers col-sm-12 col-md-6 col-lg-4 style="margin-top:50px;">
+        <div class="pic" style="margin-top:50px;">
           <img src="${this.img}">
         </div>
         <div class="text">
-          <h4 style="color:white"> Name: ${this.name}</h4>
-          <h4 style="color:white"> Surname: ${this.surname}</h4>
+          <h6 style="color:white"> Name: ${this.name}</h6>
+          <h6 style="color:white"> Surname: ${this.surname}</h6>
           <p style="color:white"> Gender: ${this.gender}</p>
           <p style="color:white"> Age: ${this.age}</p>
           <p style="color:white"> ${this.height}, ${this.weight}</p>
            <button onclick="like(`+ i +`)" style="background-color:#FA7676;border-radius:10px;">Like</button>
-          <span id="like`+ i +`">${this.like} </span><img src="img/like.png">
+          <span class="liken" id="like`+ i +`"<h6 style="color:white"</h6>${this.like} </span><img src="img/like.png">
         </div>
       </div>
       `;
@@ -37,10 +36,10 @@ class Person {
   }
 }
 
-function like (index){
-  persAll[index].like=persAll[index].like+1;
+function like (index) {
+  persAll[index].like = persAll[index].like+1;
   document.getElementById('like' + index).innerHTML=persAll[index].like;
-           }
+}
 
 var persAll = [
   new Person("Igor", "blabla", 18, "male", "183 cm", "75 kg", "img/boy1.jpg"),
@@ -79,9 +78,8 @@ var persAll = [
 //Funktionen für index.html - Seite
 
 function allList() {
-  let allList = document.getElementById("allPerson");
+  let allList = document.getElementById("allDerson");
   for (var i = 0; i < persAll.length; i++) {
-
     allList.innerHTML += persAll[i].render(i);
   }
 }
@@ -91,10 +89,10 @@ function allList() {
 function onlyMen() {
   let allList = document.getElementById("men");
   for (var i = 0; i < persAll.length; i++) {
-       if (persAll[i].gender == "male") {
-    allList.innerHTML += persAll[i].render(i);
+    if (persAll[i].gender == "male") {
+      allList.innerHTML += persAll[i].render(i);
+    }
   }
-}
 }
 
 //Funktionen für women.html - Seite
@@ -102,8 +100,8 @@ function onlyMen() {
 function onlyWomen() {
   let allList = document.getElementById("women");
   for (var i = 0; i < persAll.length; i++) {
-       if (persAll[i].gender == "female") {
-    allList.innerHTML += persAll[i].render(i);
-  }
-}
+    if (persAll[i].gender == "female") {
+      allList.innerHTML += persAll[i].render(i);
+    }
+  } 
 }
